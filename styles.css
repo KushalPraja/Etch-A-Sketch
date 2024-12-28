@@ -2,15 +2,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    padding: 10%;
-
+    border-style: solid;
+    width:500px;
+    height:500px;
 
 }
 
 .square{
     display: flex;
-    border-style: solid;
-    border-color: rgb(59, 59, 66);
-    padding: 2.74%;
+    width:31.25px;
+    height: 31.25px;
+
 
 }
