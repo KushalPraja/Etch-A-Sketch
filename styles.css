@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+
+}
+
+.square{
+    display: flex;
+    border-style: solid;
+    border-color: rgb(59, 59, 66);
+    padding: 2.6%;
+
+}
