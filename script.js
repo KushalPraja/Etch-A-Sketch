@@ -7,18 +7,17 @@ for (let i=0;i<256;i++){
 
 
 }
-draw();
+draw(); 
 
 function promptMe(){
-  var pixel=prompt("How many pixels u want:");
-  var squares=document.getElementsByClassName("square");
-  console.log(squares.length);
-  for (let i = squares.length - 1; i >= 0; i--) {
-    squares[i].classList.remove("square");
-    console.log(i);
-  }
-  
+  var pixel=prompt("Enter Length:");
+  const squares = document.querySelectorAll(".square"); // Static NodeList
+  squares.forEach((square) => {
+    square.remove(); // Remove the element entirely
+  });
   console.log("reached");
+
+  //adding new squares
   const container= document.querySelector(".container");
   for (let i=0;i<(pixel*pixel);i++){
     const squares= document.createElement("div"); 
@@ -27,16 +26,14 @@ function promptMe(){
     container.appendChild(squares);
   }
 
+  const newdivs = document.querySelectorAll(".square");
   var length=500/pixel;
-  var width=500/pixel;
-
-  squares.forEach(square=> {
-    
-    square.style.width=`${length} px`;
-    square.style.height=`${length} px`;
+  newdivs.forEach((square)=> {
+    square.style.width=`${length}px`;
+    square.style.height=`${length}px`;
   });
-  draw();
 
+  draw();
 }
 
 
